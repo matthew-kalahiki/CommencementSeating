@@ -26,6 +26,7 @@ namespace SeatingChart.Pages.Students
         [BindProperty]
         public int testing { get; set; } = default!;
 
+        [BindProperty]
         public int? ChartNum {get;set;}
 
         public async Task<IActionResult> OnGetAsync(int? id, int? chartNum)
