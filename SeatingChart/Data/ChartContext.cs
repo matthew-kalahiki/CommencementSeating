@@ -23,6 +23,7 @@ namespace SeatingChart.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Student>().ToTable("Student");
             modelBuilder.Entity<Configuration>().ToTable("Configuration");
+            modelBuilder.Entity<Other>().ToTable("Other");
         }
 
     }
