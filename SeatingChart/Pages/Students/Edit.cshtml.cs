@@ -28,6 +28,8 @@ namespace SeatingChart.Pages.Students
 
         [BindProperty]
         public int? ChartNum {get;set;}
+        [BindProperty]
+        public int IsGrad { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id, int? chartNum)
         {
@@ -51,6 +53,7 @@ namespace SeatingChart.Pages.Students
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Student.isGrad = IsGrad == 1 ? true : false;
             if (!ModelState.IsValid)
             {
                 return Page();
